@@ -1,5 +1,5 @@
 import './styles/game.css';
-import { CricketGame } from './game/CricketGameIllustrated';
+import { CricketGame } from './game/CricketGame3D';
 
 const root = document.querySelector<HTMLDivElement>('#app');
 if (!root) throw new Error('App root not found');
