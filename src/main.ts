@@ -10,7 +10,29 @@ root.innerHTML = `
     <div class="panel compact"><h2>Rotate your iPhone</h2><p>This game is designed for landscape mode.</p></div>
   </div>
   <div id="overlay" class="overlay"></div>
+  <a id="character-viewer-link" href="${import.meta.env.BASE_URL}characters.html" aria-label="View cricket characters">View Characters</a>
 `;
+
+const viewerLink = document.querySelector<HTMLAnchorElement>('#character-viewer-link');
+if (viewerLink) {
+  Object.assign(viewerLink.style, {
+    position: 'fixed',
+    zIndex: '30',
+    right: 'max(14px, env(safe-area-inset-right))',
+    bottom: 'max(14px, env(safe-area-inset-bottom))',
+    padding: '11px 15px',
+    borderRadius: '14px',
+    color: '#ffffff',
+    background: 'rgba(5, 20, 35, 0.88)',
+    border: '1px solid rgba(255,255,255,.18)',
+    boxShadow: '0 10px 30px rgba(0,0,0,.25)',
+    backdropFilter: 'blur(12px)',
+    textDecoration: 'none',
+    fontWeight: '800',
+    fontSize: '13px',
+    letterSpacing: '.01em'
+  });
+}
 
 const canvas = document.querySelector<HTMLCanvasElement>('#game-canvas');
 const overlay = document.querySelector<HTMLDivElement>('#overlay');
