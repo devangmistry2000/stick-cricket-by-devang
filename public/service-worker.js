@@ -1,16 +1,5 @@
-const CACHE = 'cricket-captain-illustrated-v2';
-const CORE = [
-  './',
-  './manifest.webmanifest',
-  './characters.html',
-  './assets/characters/batter-idle.svg',
-  './assets/characters/batter-shot.svg',
-  './assets/characters/batter-miss.svg',
-  './assets/characters/bowler-idle.svg',
-  './assets/characters/bowler-delivery.svg',
-  './assets/characters/keeper.svg',
-  './assets/characters/fielder.svg'
-];
+const CACHE = 'cricket-captain-full-3d-v3';
+const CORE = ['./', './manifest.webmanifest', './characters.html'];
 self.addEventListener('install', event => {
   self.skipWaiting();
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(CORE)));
